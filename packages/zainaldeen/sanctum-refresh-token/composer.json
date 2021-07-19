@@ -1,0 +1,53 @@
+{
+    "name": "zainaldeen/sanctum-refresh-token",
+    "description": "Provide Refresh token for sanctum",
+    "keywords": ["laravel", "sanctum", "auth", "refresh-token"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/zainaldeen/sanctum-refresh-token/issues",
+        "source": "https://github.com/zainaldeen/sanctum-refresh-token"
+    },
+    "authors": [
+        {
+            "name": "ZainAldeen Fayod",
+            "email": "zainaldeenfayod@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "ext-json": "*",
+        "illuminate/contracts": "^6.9|^7.0|^8.0",
+        "illuminate/database": "^6.9|^7.0|^8.0",
+        "illuminate/support": "^6.9|^7.0|^8.0"
+    },
+    "require-dev": {
+        "../../../vendor/mockery/mockery": "^1.0",
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "../../../vendor/phpunit/phpunit": "^8.0|^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zainaldeen\\SanctumRefreshToken\\": "packages/zainaldeen/sanctum-refresh-token/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zainaldeen\\SanctumRefreshToken\\": "packages/zainaldeen/sanctum-refresh-token/tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zainaldeen\\SanctumRefreshToken\\SanctumServiceProvider"
+            ],
+            "aliases": {
+                "SanctumRefreshToken": "Zainaldeen\\SanctumRefreshToken\\Facade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
